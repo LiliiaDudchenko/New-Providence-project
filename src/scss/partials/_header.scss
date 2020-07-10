@@ -1,0 +1,122 @@
+.header {
+	position: absolute;
+	top: 15px;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+
+	.navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.mobile_menu {
+			display: none;
+			width: 33px;
+			height: auto;
+			margin: 5px;
+
+			@include res(900) {
+				display: block;
+			}
+
+			img {
+				width: 100%;
+				height: auto;
+				cursor: pointer;
+			}
+		}
+
+		a.logo {
+			padding: 15px;
+			margin: 0 20px;
+
+			@include res(900) {
+				padding: 5px;
+			}
+		}
+
+		&__left,
+		&__right {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			@include res(900) {
+				display: none;
+				// flex-direction: column;
+				width: 100%;
+				position: absolute;
+				text-align: center;
+			}
+
+			& li {
+				padding: 15px 5px;
+				margin: 20px;
+				color: $black;
+				@include font(16px);
+
+				a:hover {
+					color: $blue;
+				}
+
+				@include res(1024) {
+					margin: 20px 15px;
+				}
+
+				@include res(900) {
+					margin: 0;
+					padding: 6px;
+				}
+			}
+
+			.light-gray-text-color {
+				color: $light-gray-text-color;
+			}
+		}
+
+		&__left {
+			margin-right: 20px;
+
+			@include res(900) {
+				top: 100%;
+				left: 0;
+			}
+		}
+
+		&__right {
+			margin-left: -20px;
+
+			@include res(960) {
+				margin-left: -10px;
+			}
+
+			@include res(900) {
+				top: 395%;
+				left: 0;
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+a.button__blue {
+	@include button(130px, 40px, $blue);
+	@include border();
+
+	@include res(960) {
+		@include button(110px, 40px, $blue);
+		margin: 0 auto;
+	}
+
+	img {
+		width: 17px;
+		height: auto;
+		margin-right: 7px;
+	}
+
+	span {
+		padding: 3px 5px;
+		color: $white;
+	}
+}
