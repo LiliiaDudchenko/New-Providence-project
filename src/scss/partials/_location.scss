@@ -1,0 +1,154 @@
+.location {
+  padding: 120px 0;
+  background-color: $white;
+
+  @include res(1024) {
+    padding: 90px 0;
+  }
+
+  @include res(890) {
+    padding: 30px 0 60px;
+  }
+
+  @include res(420) {
+    padding: 50px 0;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0 25px;
+
+    @include res(890) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    margin: 0 -10% 0 0;
+    width: 50%;
+
+    @include res(2008) {
+      margin: 0 -15% 0 0;
+    }
+
+
+
+    @include res(1400) {
+      margin: 0 6% 0 0;
+    }
+
+    @include res(890) {
+      width: 100%;
+      margin: 0 auto;
+      order: 1;
+    }
+
+    img {
+      @include res(1024) {
+        max-width: 650px;
+      }
+
+      @include res(890) {
+        max-width: 100%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    width: 50%;
+    margin: 0 15% 0 0;
+
+    @include res(1400) {
+      margin: 0 5% 0 0;
+    }
+
+    @include res(1024) {
+      margin: 0 -3% 0 0;
+    }
+
+    @include res(890) {
+      order: 2;
+      width: 100%;
+      margin: 25px auto 0;
+    }
+
+    h2 {
+      @include hFont();
+      text-align: left;
+      padding: 5px 0;
+      margin: 0 50px 50px 0;
+
+      @include res(1024) {
+        margin: 0 0 40px;
+      }
+
+      @include res(890) {
+        @include hFont(38px);
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0;
+        max-width: none;
+        display: flex;
+      }
+
+      @include res(576) {
+        text-align: center;
+        margin: 0 0 20px;
+      }
+
+      @include res(480) {
+        @include hFont(32px);
+        text-align: center;
+      }
+    }
+
+    p {
+      @include font(20px);
+      color: $main-text-color;
+
+      @include res(890) {
+        text-align: justify;
+      }
+
+      @include res(770) {
+        margin: 15px 0;
+      }
+
+      @include res(420) {
+        @include font(18px);
+      }
+    }
+
+    span {
+      display: block;
+      @include font(12px, 700);
+      color: $black;
+      text-transform: uppercase;
+      margin: 60px 0 15px 0;
+
+      @include res(480) {
+        text-align: center;
+        margin: 40px 0 15px 0;
+      }
+    }
+
+    .location_partners {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include res(480) {
+        justify-content: center;
+      }
+
+      img.ever {
+        margin-left: 20px;
+      }
+    }
+  }
+}
