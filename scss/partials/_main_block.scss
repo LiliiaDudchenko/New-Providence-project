@@ -1,0 +1,109 @@
+.main_block {
+    background: url(../images/bg.jpg) center/cover no-repeat fixed $white;
+    padding: 170px 0 0 0;
+
+    @include res(900) {
+        background-attachment: scroll;
+    }
+
+
+    &__inner {
+        min-height: 600px;
+        // height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            @include hFont(62px);
+            padding: 10px;
+            margin: 60px 15px 15px;
+            text-align: center;
+
+            @include res(900) {
+                margin: 115px 15px 15px;
+                @include hFont(52px);
+            }
+
+            @include res(640) {
+                @include hFont(47px);
+            }
+
+            @include res(420) {
+                @include hFont(42px);
+            }
+        }
+
+        p {
+            @include font(20px);
+            color: $main-text-color;
+            text-align: center;
+            max-width: 790px;
+            padding: 10px 15px;
+
+
+            @include res(640) {
+                @include font(18px);
+            }
+
+
+            @include res(420) {
+                @include font(16px);
+            }
+        }
+    }
+
+    .button__light {
+        // display: block;
+        @include button(205px, 50px, $white);
+        @include border(2px, 25px);
+        margin: 50px 0 60px;
+
+        &:hover {
+            color: $white;
+        }
+
+        img {
+            margin-right: 15px;
+        }
+    }
+
+    .device {
+        display: block;
+
+
+        &__item {
+            display: block;
+            padding: 0 10px;
+            margin: 0 auto;
+
+
+            @include res(900) {
+                width: 350px;
+            }
+
+            @include res(640) {
+                width: 340px;
+            }
+
+            @include res(480) {
+                width: 300px;
+            }
+
+            @include res(420) {
+                width: 290px;
+            }
+
+            @include res(330) {
+                width: 250px;
+            }
+        }
+    }
+}
