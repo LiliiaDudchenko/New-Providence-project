@@ -1,0 +1,62 @@
+.main_block {
+    background: url(../images/bg.jpg) center/cover no-repeat fixed $white;
+    padding: 170px 0 0 0;
+
+
+    &__inner {
+        min-height: 600px;
+        // height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__intro {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            @include hFont(62px);
+            padding: 10px;
+            margin: 60px 15px 15px;
+            text-align: center;
+        }
+
+        p {
+            @include font(20px);
+            color: $main-text-color;
+            text-align: center;
+            max-width: 790px;
+            padding: 10px 15px;
+        }
+    }
+
+    .button__light {
+        // display: block;
+        @include button(205px, 50px, $white);
+        @include border(2px, 25px);
+        margin: 50px 0 60px;
+
+        &:hover {
+            color: $white;
+        }
+
+        img {
+            margin-right: 15px;
+        }
+    }
+
+    .device {
+        display: block;
+        max-width: 50%;
+
+        &__item {
+            display: block;
+            padding: 0 10px;
+            margin: 0 auto;
+
+        }
+    }
+}

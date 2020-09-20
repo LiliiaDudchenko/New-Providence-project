@@ -1,0 +1,189 @@
+.interface {
+    background-color: $bg-gray;
+
+    &__inner {
+        text-align: center;
+
+        &__text {
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 1px;
+                width: 50px;
+                background-color: $blue;
+                position: absolute;
+                top: 58%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+
+
+            h2 {
+                @include hFont();
+                color: $black;
+                padding: 5px;
+                margin: 0 0 90px 0;
+
+
+            }
+
+            span {
+                display: block;
+                margin: 50px 0 40px 0;
+                text-transform: uppercase;
+                @include font(12px, 400);
+                color: $light-gray-text-color;
+            }
+
+
+
+        }
+    }
+
+    &__slider {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 800px;
+        margin-bottom: 120px;
+
+
+        .slider__item {
+            max-width: 340px;
+            max-height: 580px;
+            box-shadow: 0px 3px 29px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+
+
+
+            &:nth-child(3) {
+                box-shadow: none;
+                max-width: 370px;
+                max-height: 750px;
+                margin-top: 0;
+            }
+
+            &:first-child {
+                margin-left: -32%;
+            }
+
+            &:last-child {
+                margin-right: -32%;
+                margin-left: 2px;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+
+    }
+
+    span {
+        display: block;
+        margin: 0 0 25px 0;
+        text-transform: uppercase;
+        @include font(12px, 400);
+        color: $light-gray-text-color;
+    }
+
+    h2 {
+        @include hFont();
+        color: $black;
+        padding: 5px;
+        // margin: 0 0 50px 0;
+
+
+    }
+
+    .form {
+
+        margin: 50px 0;
+
+
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include border(1px, 25px, #cbcbce);
+            margin: 0 auto;
+            padding: 4px;
+            max-width: 500px;
+
+
+
+
+            input {
+                background-color: transparent;
+                @include font(16px);
+                color: #3a3d4b;
+                min-width: 65%;
+                margin-left: 20px;
+
+            }
+
+        }
+
+        &__button {
+
+            @include border();
+            @include button(165px, 38px, $green);
+            max-width: 35%;
+            color: $white;
+            padding: 2px 5px;
+
+
+
+            div {
+                margin: 0 10px;
+                @include font(16px);
+
+
+            }
+        }
+
+    }
+
+    a.download__button {
+        display: block;
+        @include border(0, 30px);
+        @include button(200px, 60px, $black);
+        padding: 12px 20px;
+        margin: 0 auto;
+
+        &:hover {
+            @include border(0, 30px);
+        }
+
+
+
+        div {
+            @include font(12px);
+            color: $white;
+            margin: 0 12px;
+
+            .app {
+                @include font(23px);
+                margin: 0;
+
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+}

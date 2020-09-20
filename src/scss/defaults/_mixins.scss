@@ -1,0 +1,45 @@
+@mixin res($res) {
+	@media (max-width: $res + px) {
+		@content;
+	}
+}
+
+@mixin font($fontS: 18px, $fontW:400) {
+	font-family: $fontLato;
+	line-height: 1.4;
+	font-size: $fontS;
+	font-weight: $fontW;
+}
+
+@mixin hFont($fontS: 42px, $fontW:400, $fontF:$fontVarela) {
+	font-family: $fontF;
+	line-height: 1.2;
+	font-size: $fontS;
+	font-weight: $fontW;
+}
+
+
+@mixin border($borderW:0, $borderR: 21px, $borderC:#e9e9ea) {
+	border-radius: $borderR;
+	border-width: $borderW;
+	border-style: solid;
+	border-color: $borderC;
+}
+
+@mixin button($buttonW, $buttonH, $buttonBg) {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: $buttonW;
+	height: $buttonH;
+	background-color: $buttonBg;
+	transition: background-color 0.2s linear;
+
+	&:hover {
+		background: rgb(188, 188, 189);
+		background: linear-gradient(58deg, rgba(188, 188, 189, 1) 0%, rgba(153, 152, 152, 1) 50%, rgba(19, 14, 14, 1) 100%);
+		@include border($borderW:0);
+
+	}
+
+}

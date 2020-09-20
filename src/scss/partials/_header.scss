@@ -1,0 +1,59 @@
+.header {
+
+	position: absolute;
+	top: 15px;
+	left: 0;
+	z-index: 10;
+	width: 100%;
+
+	.navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__left,
+		&__right {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			& li {
+				padding: 15px 5px;
+				margin: 20px;
+				color: $black;
+				@include font(16px);
+
+				a:hover {
+					color: $blue;
+				}
+			}
+
+			.light-gray-text-color {
+				color: $light-gray-text-color;
+			}
+		}
+	}
+}
+
+
+
+.button__blue {
+	@include button(130px, 40px, $blue);
+	@include border();
+
+
+	img {
+		width: 17px;
+		height: auto;
+		margin-right: 7px;
+	}
+
+	span {
+		padding: 3px 5px;
+		color: $white;
+	}
+
+
+
+
+}

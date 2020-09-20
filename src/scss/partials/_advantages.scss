@@ -1,0 +1,59 @@
+.advantages {
+    padding: 100px 0;
+    background-color: $white;
+
+
+
+
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        position: relative;
+
+
+
+        &:after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: $bgOfLine;
+            position: absolute;
+            top: 134%;
+            left: 0;
+        }
+
+    }
+
+
+    &__item {
+        max-width: 500px;
+        margin: 0 50px;
+        padding: 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        h3 {
+            margin: 20px 0;
+            @include hFont(26px, 300, $fontLato);
+        }
+
+        p {
+            margin: 20px 0;
+            @include font();
+            color: $main-text-color;
+        }
+
+        &__icon {
+            width: 42px;
+            margin: 20px 0;
+        }
+    }
+
+}
